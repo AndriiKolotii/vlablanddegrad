@@ -22,8 +22,20 @@ def  get_count_equel(tif_path,chislo,ker):
             #print(band.shape)
             s=s+numpy.sum(band==chislo)
             s=s+0.0
-            #s=s*900/10000000
+            #s=s*900/10000000	
     return s
-print(get_count_equel('/tmp/Ukraine_map_7_cl_trans_00_16_no_city.tif',12,1000))
-print(get_count_equel('/tmp/Ukraine_map_7_cl_trans_00_16_no_city.tif',13,1000))
-print(get_count_equel('/tmp/Ukraine_map_7_cl_trans_00_16_no_city.tif',16,1000))
+print("Declining productivity [30 m pixels]:")
+print("Forest to grassland")
+print(get_count_equel('/tmp/unzipped/main_degrad.tif',12,1000))
+print("Forest to cropland")
+print(get_count_equel('/tmp/unzipped/main_degrad.tif',13,1000))
+print("Forest to other")
+print(get_count_equel('/tmp/unzipped/main_degrad.tif',16,1000))
+
+print("Moderate decline in productivity [30 m pixels]:")
+print("Forest to grassland")
+print(get_count_equel('/tmp/unzipped/moderate_degrad.tif',12,1000))
+print("Forest to cropland")
+print(get_count_equel('/tmp/unzipped/moderate_degrad.tif',13,1000))
+print("Forest to other")
+print(get_count_equel('/tmp/unzipped/moderate_degrad.tif',16,1000))
