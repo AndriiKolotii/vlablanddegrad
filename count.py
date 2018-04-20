@@ -22,7 +22,7 @@ def  get_count_equel(tif_path,chislo,ker):
             #print(band.shape)
             s=s+numpy.sum(band==chislo)
             
-    #s=float(s)*900.0/1000000.0	
+    s=float(s)*900.0/1000000.0	
     return s
 print("Declining productivity [km squared]:")
 print("Forest to grassland")
