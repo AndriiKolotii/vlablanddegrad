@@ -21,10 +21,10 @@ def  get_count_equel(tif_path,chislo,ker):
             band=raster.GetRasterBand(1).ReadAsArray(i,j,ker_realx,ker_realy).astype(numpy.float32)
             #print(band.shape)
             s=s+numpy.sum(band==chislo)
-            s=s+0.0
-            #s=s*900/10000000	
+            
+    s=float(s)*900.0/1000000.0	
     return s
-print("Declining productivity [30 m pixels]:")
+print("Declining productivity [km squared]:")
 print("Forest to grassland")
 print(get_count_equel('/tmp/unzipped/main_degrad.tif',12,1000))
 print("Forest to cropland")
@@ -32,7 +32,7 @@ print(get_count_equel('/tmp/unzipped/main_degrad.tif',13,1000))
 print("Forest to other")
 print(get_count_equel('/tmp/unzipped/main_degrad.tif',16,1000))
 
-print("Moderate decline in productivity [30 m pixels]:")
+print("Moderate decline in productivity [km squared]:")
 print("Forest to grassland")
 print(get_count_equel('/tmp/unzipped/moderate_degrad.tif',12,1000))
 print("Forest to cropland")
