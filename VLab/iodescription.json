@@ -9,7 +9,7 @@
       "obligation": true,
       "hasDefault": false,
       "valueSchema": "url",
-      "target": "data/ldn_data.zip"
+      "target": "data/ldn_data.tar"
  }
   ],
   "outputs": [
